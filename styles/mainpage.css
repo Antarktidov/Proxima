@@ -1,0 +1,80 @@
+.our-studies {
+    margin-top: 72px;
+    margin-left: var(--margin-side-left);
+}
+.our-studies-h2 {
+    font-size: 36px;
+    font-weight: 500px;
+}
+.our-studies-block {
+    margin-top: 37px;
+}
+.our-studies-h3 {
+    font-size: 30px;
+}
+.our-studies-sub-block {
+    margin-top: 24px;
+
+    --width: 316px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(var(--width), auto));
+}
+.studi-container {
+    margin-right: 44px;
+    margin-bottom: 86px;
+
+    height: 686px;
+    width: 272px;
+}
+.studi-sub-container {
+    background-color: var(--secondary-background-color);
+    color: var(--secondary-text-color);
+
+    height: 430px;
+
+    padding: 11px;
+}
+.studi-name {
+    font-size: 24px;
+    min-height: 86px;
+
+    margin-top: 22px;
+}
+.studi-description {
+    min-height: 75px;
+}
+.studi-sub-sub-container {
+    height: 185px;
+
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 27px;
+}
+.studi-link,
+.studi-button {
+    text-align: center;
+
+    width: 250px;
+    height: 49px;
+}
+.studi-link {
+    margin: auto;
+    display: block;
+    /*height: fit-content;*/
+
+    --margin-side: 16px;
+    padding-top: var(--margin-side);
+    padding-bottom: var(--margin-side);
+    margin-bottom: 19px !important;
+}
+.studi-link-hollow {
+    border: 1px solid var(--secondary-text-color);
+}
+.studi-link-filled {
+    background-color: var(--assent-color);
+}
+:disabled.studi-link-filled {
+    background-color: aquamarine;
+    color: gray;
+}

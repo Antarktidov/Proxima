@@ -1,0 +1,94 @@
+.studi-application-h2 {
+    font-size: 36px;
+    font-weight: 500px;
+}
+.studi-application {
+    margin-top: 72px;
+    margin-left: var(--margin-side-left);
+    margin-bottom: 90px;
+}
+.rendered-form-block {
+    display: flex;
+}
+.rendered-form-sub-block {
+    display: flex;
+    flex-direction: column;
+}
+.rendered-form-sub-block {
+    font-size: 16px;
+    margin-right: 40px;
+}
+select,
+input:not([type="checkbox"]) {
+    height: 30px;
+    width: 154px;
+
+    border: 1px solid black;
+
+    margin-top: 14px ;
+}
+label {
+    margin-top: 30px ;
+}
+.studi-application-studies-label {
+    margin-top: 14px;
+    font-size: 16px;
+
+    display: flex;
+}
+.studi-application-studies-label-text {
+    margin-top: 14px;
+    font-size: 16px;
+
+    display: inline-block;
+}
+.studi-application-studies-name-container {
+    background-color: var(--secondary-background-color);
+    display: inline-block;
+
+    margin: 24px;
+    margin-left: 0;
+
+    border-radius: 6px;
+
+
+    --padding-top-button: 7px;
+    --padding-side: 12px;
+
+    padding-top: var(--padding-top-button);
+    padding-bottom: var(--padding-top-button);
+    padding-left: var(--padding-side);
+    padding-right: var(--padding-side);
+}
+.studi-application-studies-name-cross {
+    margin-left: var(--padding-side);
+    color: red;
+}
+
+.studi-application-button {
+    margin-top: 41px;
+
+    background-color: var(--assent-color);
+
+    height: 49px;
+
+    --padding-side: 26px;
+    padding-left: var(--padding-side);
+    padding-right: var(--padding-side);
+}
+:disabled.studi-application-button {
+    background-color: aquamarine;
+    color: gray;
+}
+@media screen and ( max-width: 615px ) {
+    .rendered-form-block {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media screen and ( max-width: 408px) {
+    .rendered-form-block {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}

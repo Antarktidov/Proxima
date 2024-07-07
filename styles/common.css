@@ -1,0 +1,73 @@
+:root {
+    --body-background-color: #FBEAFF;
+    --main-background-color: #845EC2;
+    --secondary-background-color: #B39CD0;
+    --assent-color: #00C9A7;
+    --assent-disabled-color: #84E7D6;
+
+    --main-text-color: white;
+    --secondary-text-color: black;
+    --disabled-text-color: #4F4E4E;
+
+    --margin-side-left: 116px;
+}
+
+body {
+    background-color: var(--body-background-color);
+}
+.nav-main {
+    background-color: var(--main-background-color);
+    color: var(--main-text-color);
+
+    height: 113px;
+
+    display: flex;
+}
+.logo-and-name {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 16px;
+}
+.company-name {
+    font-size: 30px;
+    font-weight: 500;
+    
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 16px;
+}
+.sub-nav {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 16px;
+}
+.nav-link {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 32px;
+
+    text-transform: uppercase;
+}
+
+.about,
+.footer {
+    background-color: var(--secondary-background-color);
+    color: var(--secondary-text-color);
+
+    height: fit-content/*142px*/;
+
+    display: flex;
+}
+
+.p-about,
+.footer-p {
+    --margin-top-bottom: 54px;
+    --margin-side: var(--margin-side-left);
+    margin-left: var(--margin-side);
+    margin-right: var(--margin-side);
+    margin-top: var(--margin-top-bottom);
+    margin-bottom: var(--margin-top-bottom);
+}
+.invisible {
+    display: none !important;
+}

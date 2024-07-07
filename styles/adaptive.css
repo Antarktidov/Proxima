@@ -1,0 +1,44 @@
+@media screen and ( max-width: 785px ) {
+    .sub-nav {
+    display: none;
+    }
+    .nav-main {
+        flex-direction: column;
+    }
+    .sub-nav-mobile {
+        display: flex;
+        flex-direction: column;
+        background-color: var(--main-background-color);
+        color: var(--main-text-color);
+        height: 200px;
+    }
+    .sub-nav-mobile .nav-link {
+        margin: 15px;
+        margin-left: 29px;
+    }
+    :root {
+        --margin-side-left: 23px;
+    }
+}
+@media screen and ( min-width: 786px ) {
+    .hambureger-menu-cross {
+    display: none;
+    }
+    .sub-nav-mobile {
+        display: none;
+    }
+}
+.hambureger-menu-cross {
+    height: 29px;
+    width: 39px;
+    
+    margin: auto;
+    margin-right: 18px;
+}
+.nav-main-top {
+    display: flex;
+}
+
+.logo-and-name {
+    display: flex;
+}
