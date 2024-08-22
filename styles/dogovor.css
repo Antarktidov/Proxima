@@ -1,0 +1,16 @@
+.dogovor-main {
+    margin-top: 72px;
+    margin-left: var(--margin-side-left);
+    margin-right:  var(--margin-side-left);;
+}
+
+.dogovor-h2 {
+    font-size: 36px;
+    font-weight: 500;
+}
+.dogovor-text {
+    font-size: 16px;
+
+    margin-top: 46px;
+    margin-bottom: 156px;
+}

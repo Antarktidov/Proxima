@@ -19,6 +19,14 @@
     :root {
         --margin-side-left: 23px;
     }
+
+    .teachers-block {
+        margin-top: 90px;
+    
+        --width: 99vw !important;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(99vw, auto)) !important;
+    }
 }
 @media screen and ( min-width: 786px ) {
     .hambureger-menu-cross {

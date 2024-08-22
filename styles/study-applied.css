@@ -1,0 +1,14 @@
+.congratulations-h2 {
+    font-size: 36px;
+    font-weight: 500;
+}
+.successfully-p {
+    font-size: 30px;
+    margin-top: 46px;
+}
+.applied-main {
+    margin-top: 72px;
+    margin-left: var(--margin-side-left);
+    margin-right:  var(--margin-side-left);
+    margin-bottom: 72px;
+}

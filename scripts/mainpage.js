@@ -1,96 +1,96 @@
-const studiButtonSelectorAll = document.querySelectorAll('.studi-button');
-const studiChoiceProgressBarFilledSelector = document.querySelector('.studi-choice-progress-bar-filled');
-const studiChoiceFurtherButtonSelector = document.querySelector('.studi-choice-further-button');
-const studiChoiceCounterSelector = document.querySelector('.studi-choice-counter');
-const studiChoiceModalSelector = document.querySelector('.studi-choice-modal');
-const choicedSstudiestextInputSelector = document.querySelector('.choiced-studiestext-input');
+const studyButtonSelectorAll = document.querySelectorAll('.study-button');
+const studyChoiceProgressBarFilledSelector = document.querySelector('.study-choice-progress-bar-filled');
+const studyChoiceFurtherButtonSelector = document.querySelector('.study-choice-further-button');
+const studyChoiceCounterSelector = document.querySelector('.study-choice-counter');
+const studyChoiceModalSelector = document.querySelector('.study-choice-modal');
+const choicedSstudyestextInputSelector = document.querySelector('.choiced-studyestext-input');
 
-const studiButtonSelectorAllArrLen = studiButtonSelectorAll.length;
+const studyButtonSelectorAllArrLen = studyButtonSelectorAll.length;
 
-const studiLinkFilledText = 'ДОБАВИТЬ ПРЕДМЕТ';
-const studiLinkHollowText = 'ДОБАВЛЕНО';
+const studyLinkFilledText = 'ДОБАВИТЬ ПРЕДМЕТ';
+const studyLinkHollowText = 'ДОБАВЛЕНО';
 
-let choicedStudies = [];
-let choicedStudiesCount = 0;
+let choicedstudyes = [];
+let choicedstudyesCount = 0;
 
-for (let i = 0; i < studiButtonSelectorAllArrLen; i++) {
-    studiButtonSelectorAll[i].onclick = function() {
-        let currentStudiButtonSelector = studiButtonSelectorAll[i];
+for (let i = 0; i < studyButtonSelectorAllArrLen; i++) {
+    studyButtonSelectorAll[i].onclick = function() {
+        let currentstudyButtonSelector = studyButtonSelectorAll[i];
 
-        if (currentStudiButtonSelector.classList.contains('studi-link-filled') && choicedStudiesCount < 5) {
+        if (currentstudyButtonSelector.classList.contains('study-link-filled') && choicedstudyesCount < 5) {
 
-            studiesModalToggle();
+            studyesModalToggle();
 
-            currentStudiButtonSelector.classList.remove('studi-link-filled');
-            currentStudiButtonSelector.classList.add('studi-link-hollow');
-            currentStudiButtonSelector.innerText = studiLinkHollowText;
+            currentstudyButtonSelector.classList.remove('study-link-filled');
+            currentstudyButtonSelector.classList.add('study-link-hollow');
+            currentstudyButtonSelector.innerText = studyLinkHollowText;
 
-            choicedStudiesCount++;
+            choicedstudyesCount++;
             
-            changeDisplayedStudiesCounter();
+            changeDisplayedstudyesCounter();
 
-            choicedStudies.push(currentStudiButtonSelector.value);
+            choicedstudyes.push(currentstudyButtonSelector.value);
 
-            if (choicedStudiesCount === 5) {
-                for (let j = 0; j < studiButtonSelectorAllArrLen; j++) {
-                    if ( studiButtonSelectorAll[j].classList.contains('studi-link-filled')) {
-                        studiButtonSelectorAll[j].setAttribute('disabled', 'disabled');
+            if (choicedstudyesCount === 5) {
+                for (let j = 0; j < studyButtonSelectorAllArrLen; j++) {
+                    if ( studyButtonSelectorAll[j].classList.contains('study-link-filled')) {
+                        studyButtonSelectorAll[j].setAttribute('disabled', 'disabled');
                     }
                 }
-                studiChoiceProgressBarFilledSelector.style.borderTopRightRadius = 'var(--progress-bar-border-radius)';
-                studiChoiceProgressBarFilledSelector.style.borderBottomRightRadius = 'var(--progress-bar-border-radius)';
+                studyChoiceProgressBarFilledSelector.style.borderTopRightRadius = 'var(--progress-bar-border-radius)';
+                studyChoiceProgressBarFilledSelector.style.borderBottomRightRadius = 'var(--progress-bar-border-radius)';
 
             }
 
-            studiChoiceProgressBarFilledChange();
+            studyChoiceProgressBarFilledChange();
             setPostValue();
 
-        } else if (currentStudiButtonSelector.classList.contains('studi-link-hollow') && choicedStudiesCount > 0) {
+        } else if (currentstudyButtonSelector.classList.contains('study-link-hollow') && choicedstudyesCount > 0) {
 
-            currentStudiButtonSelector.classList.remove('studi-link-hollow');
-            currentStudiButtonSelector.classList.add('studi-link-filled');
-            currentStudiButtonSelector.innerText = studiLinkFilledText;
+            currentstudyButtonSelector.classList.remove('study-link-hollow');
+            currentstudyButtonSelector.classList.add('study-link-filled');
+            currentstudyButtonSelector.innerText = studyLinkFilledText;
 
-            choicedStudiesCount--;
+            choicedstudyesCount--;
 
-            studiesModalToggle();
+            studyesModalToggle();
 
-            changeDisplayedStudiesCounter();
+            changeDisplayedstudyesCounter();
 
-            let removingStudiIndex = choicedStudies.indexOf(currentStudiButtonSelector.value);
-            choicedStudies.splice(removingStudiIndex, 1);
+            let removingstudyIndex = choicedstudyes.indexOf(currentstudyButtonSelector.value);
+            choicedstudyes.splice(removingstudyIndex, 1);
 
-            if (choicedStudiesCount === 4) {
-                for (let j = 0; j < studiButtonSelectorAllArrLen; j++) {
-                    if ( studiButtonSelectorAll[j].classList.contains('studi-link-filled')) {
-                        studiButtonSelectorAll[j].disabled = false;
+            if (choicedstudyesCount === 4) {
+                for (let j = 0; j < studyButtonSelectorAllArrLen; j++) {
+                    if ( studyButtonSelectorAll[j].classList.contains('study-link-filled')) {
+                        studyButtonSelectorAll[j].disabled = false;
                     }
                 }
 
-                studiChoiceProgressBarFilledSelector.style.borderTopRightRadius = '';
-                studiChoiceProgressBarFilledSelector.style.borderBottomRightRadius = '';
+                studyChoiceProgressBarFilledSelector.style.borderTopRightRadius = '';
+                studyChoiceProgressBarFilledSelector.style.borderBottomRightRadius = '';
             }
 
-            studiChoiceProgressBarFilledChange();
+            studyChoiceProgressBarFilledChange();
             setPostValue();
         }
     }
 }
 
 function setPostValue() {
-    choicedSstudiestextInputSelector.value = choicedStudies.toString();
+    choicedSstudyestextInputSelector.value = choicedstudyes.toString();
 }
 
-function studiesModalToggle() {
-    if (choicedStudiesCount === 0) {
-        studiChoiceModalSelector.classList.toggle('invisible');
+function studyesModalToggle() {
+    if (choicedstudyesCount === 0) {
+        studyChoiceModalSelector.classList.toggle('invisible');
     }
 }
 
-function changeDisplayedStudiesCounter() {
-    studiChoiceCounterSelector.innerText = choicedStudiesCount.toString();
+function changeDisplayedstudyesCounter() {
+    studyChoiceCounterSelector.innerText = choicedstudyesCount.toString();
 }
 
-function studiChoiceProgressBarFilledChange() {
-    studiChoiceProgressBarFilledSelector.style.width = (choicedStudiesCount*20).toString() +'%';
+function studyChoiceProgressBarFilledChange() {
+    studyChoiceProgressBarFilledSelector.style.width = (choicedstudyesCount*20).toString() +'%';
 }
