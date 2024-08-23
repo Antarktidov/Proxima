@@ -1,0 +1,52 @@
+:root {
+    --body-background-color: #FCEAFF;
+    --main-background-color: #4E11B0;
+    --secondary-background-color: #7D6697;
+    /*--assent-color: #00C9A7;
+    --assent-disabled-color: #84E7D6;*/
+
+    --main-text-color: white;
+    --secondary-text-color: white;
+
+    --th-background-color: #828282;
+    --th-color: black;
+
+    --td-background-color: white;
+    --td-color: black;
+}
+body {
+    min-width: 1170px;
+}
+.students-list-h2 {
+    font-size: 36px;
+    font-weight: 500px;
+}
+.admin-dashboard-main {
+    margin-top: 72px;
+    margin-left: var(--margin-side-left);
+}
+
+table.students-table{
+	width: 90%;
+	border-collapse:collapse;
+	border-spacing:0;
+	height: auto;
+
+    margin-top: 91px;
+    margin-bottom: 91px;
+}
+table.students-table,table.students-table td, table.students-table th {
+	border: 1px solid var(--td-color);
+    color: var(--td-color);
+    background-color: var(--td-background-color);
+}
+table.students-table td,table.students-table th {
+	padding: 3px;
+	width: 30px;
+	height: 35px;
+}
+table.students-table th {
+	background: var(--th-background-color); 
+	color: var(--th-color); 
+	font-weight: bold;
+}
