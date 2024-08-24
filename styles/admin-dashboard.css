@@ -13,21 +13,34 @@
 
     --td-background-color: white;
     --td-color: black;
+
+    --remove-btn-background-color: #9E0000;
+    --remove-btn-color: white;
+
 }
 body {
     min-width: 1170px;
+}
+.nav-main-top {
+    display: flex;
+}
+
+.logo-and-name {
+    display: flex;
 }
 .students-list-h2 {
     font-size: 36px;
     font-weight: 500px;
 }
-.admin-dashboard-main {
+.admin-dashboard-main,
+.student-removed-main {
     margin-top: 72px;
+    margin-bottom: 72px;
     margin-left: var(--margin-side-left);
+    margin-right: var(--margin-side-left);
 }
-
 table.students-table{
-	width: 90%;
+	width: 100%;
 	border-collapse:collapse;
 	border-spacing:0;
 	height: auto;
@@ -49,4 +62,18 @@ table.students-table th {
 	background: var(--th-background-color); 
 	color: var(--th-color); 
 	font-weight: bold;
+}
+
+.empty-table-message {
+    font-size: 30px;
+    margin-top: 46px;
+}
+
+.remove-student-td {
+    background-color: var(--remove-btn-background-color) !important;
+    color: var(--remove-btn-color) !important;
+}
+.successfully-h2 {
+    font-size: 36px;
+    font-weight: 500;
 }

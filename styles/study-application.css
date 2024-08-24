@@ -6,6 +6,8 @@
     margin-top: 72px;
     margin-left: var(--margin-side-left);
     margin-bottom: 90px;
+
+    color: var(--text-body-color);
 }
 .rendered-form-block {
     display: flex;
@@ -23,7 +25,7 @@ input:not([type="checkbox"]) {
     height: 30px;
     width: 154px;
 
-    border: 1px solid black;
+    border: 1px solid var(--text-body-color);
 
     margin-top: 14px ;
 }
@@ -66,7 +68,7 @@ label {
 }
 .dogovor-link {
     text-decoration: underline !important;
-    color: blue !important;
+    color: var(--dogovor-link-color) !important;
 }
 
 .study-application-button {
@@ -81,8 +83,8 @@ label {
     padding-right: var(--padding-side);
 }
 :disabled.study-application-button {
-    background-color: aquamarine;
-    color: gray;
+    background-color: var(--disabled-btn-background-color);
+    color: var(--disabled-btn-color);
 }
 @media screen and ( max-width: 615px ) {
     .rendered-form-block {

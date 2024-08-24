@@ -11,4 +11,6 @@
     margin-left: var(--margin-side-left);
     margin-right:  var(--margin-side-left);
     margin-bottom: 72px;
+
+    color: var(--text-body-color);
 }

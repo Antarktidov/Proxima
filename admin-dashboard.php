@@ -11,7 +11,7 @@ if ($ip == '::1' || $ip == '127.0.0.1') {
         <title>Проксима | Главная</title>
         <link rel="stylesheet" href="styles/reset.css">
         <link rel="stylesheet" href="styles/common.css">
-        <link rel="stylesheet" href="styles/adaptive.css">
+        <!--<link rel="stylesheet" href="styles/adaptive.css">-->
 
         <link rel="stylesheet" href="styles/admin-dashboard.css">
         <meta name="viewport" content="width=1170">
@@ -20,11 +20,7 @@ if ($ip == '::1' || $ip == '127.0.0.1') {
         <?php require_once 'components/admin-top-nav.php';?>
         <main class="admin-dashboard-main">
         <h2 class="students-list-h2">СПИСОК СТУДЕНТОВ</h2>
-        <?php
-        $servername = "localhost";
-        $username = "root";
-        $password = "";
-        $dbname = "proxima_students";
+        <?php require_once 'components/db-data.php';
 
         // Create connection
         $conn = new mysqli($servername, $username, $password, $dbname);
@@ -42,7 +38,7 @@ if ($ip == '::1' || $ip == '127.0.0.1') {
             <tr>
                 <th>id</th><th>Город</th><th>Гражданство</th><th>Имя</th>
                 <th>Фамилия</th><th>Отчество</th><th>Телефон</th><th>e-mail</th>
-                <th>Предметы</th>
+                <th>Предметы</th><th></th>
             </tr>
             <tbody>
             <?php
@@ -50,14 +46,22 @@ if ($ip == '::1' || $ip == '127.0.0.1') {
         while($row = $result->fetch_assoc()) {
             echo "<tr><td>" . $row["id"]. "</td><td>" . $row["city"]. "</td><td>" . $row["citizenship"]. "</td><td>" . 
             $row["firstname"]. "</td><td>" . $row["surname"]. "</td><td>" . $row["patronymic"].
-            "</td><td>" . $row["phoneNumber"]. "</td><td>" . $row["email"].  "</td><td>" . $row["choicedstudyes"]. "</td></tr>";
-        }
+            "</td><td>" . $row["phoneNumber"]. "</td><td>" . $row["email"].  "</td><td>" . $row["choicedstudyes"]. "</td>";?>
+            <td class="remove-student-td">
+            <form action="student-removed.php" method="POST">
+                <button type="submit" class="remove-student-btn">УДАЛИТЬ СТУДЕНТА</button>
+                <input class="invisible" type="text" name="removable-student-id" value="<?=$row["id"];?>">
+            </form>
+            </td>
+            </tr>
+        <?php    
+            }
         ?>
             </tbody>
             </table>
             <?php
         } else {
-        echo "0 results";
+        ?><p class="empty-table-message">Таблица БД пуста</p><?php
         }
         $conn->close();
         ?>

@@ -1,4 +1,4 @@
-@media screen and ( max-width: 785px ) {
+@media screen and ( max-width: 874px ) {
     .sub-nav {
     display: none;
     }
@@ -16,6 +16,10 @@
         margin: 15px;
         margin-left: 29px;
     }
+    .theme-toggler {
+        display: none;
+    }
+
     :root {
         --margin-side-left: 23px;
     }
@@ -28,7 +32,7 @@
         grid-template-columns: repeat(auto-fill, minmax(99vw, auto)) !important;
     }
 }
-@media screen and ( min-width: 786px ) {
+@media screen and ( min-width: 875px ) {
     .hambureger-menu-cross {
     display: none;
     }
@@ -41,12 +45,25 @@
     width: 39px;
     
     margin: auto;
-    margin-right: 18px;
+    margin-right: 32px;
 }
 .nav-main-top {
     display: flex;
 }
 
 .logo-and-name {
+    display: flex;
+}
+.theme-toggler-mobile-icon {
+    /*height: 27px;
+    width: 25px;*/
+    height: 35%;
+    width: auto;
+
+    margin-left: auto;
+    margin-right: 17px;
+    display: flex;
+}
+.theme-toggler-mobile {
     display: flex;
 }

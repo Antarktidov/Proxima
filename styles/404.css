@@ -2,14 +2,20 @@
     font-size: 320px;
     font-weight: 800;
     font-family: 'inter';
-    color: var(--main-background-color);
     text-align: center;
     margin-top: 46px;
+}
+.theme-light .error-404-numbers,
+.theme-light .error-404-h3 {
+    color: var(--main-background-color);
+}
+.theme-dark .error-404-numbers,
+.theme-dark .error-404-h3 {
+    color: white;
 }
 .error-404-h3 {
     font-size: 48px;
     font-weight: 800;
-    color: var(--main-background-color);
     text-align: center;
 }
 .error-404-p {
@@ -19,6 +25,7 @@
     margin-bottom: 58px;
 
     font-size: 24px;
+    color: var(--text-body-color);
 }
 @media screen and ( max-width: 785px ) {
     .error-404-numbers {

@@ -12,7 +12,7 @@ require_once 'components/test-input.php';
     <link rel="stylesheet" href="styles/study-application.css">
     <script src="scripts/study-application.js" defer></script>
 </head>
-<body>
+<body  class="theme-light">
     <?php require_once 'components/top-nav.php';?>
     <main class="study-application">
         <h2 class="study-application-h2">ЗАЯВКА НА ОБУЧЕНИЕ</h2>

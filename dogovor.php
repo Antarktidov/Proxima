@@ -7,7 +7,7 @@
     <?php require_once 'components/default-css-imports.php';?>
     <link rel="stylesheet" href="styles/dogovor.css">
 </head>
-<body>
+<body class="theme-light">
 <?php require_once 'components/top-nav.php';?>
 <main class="dogovor-main">
     <h2 class="dogovor-h2">ДОГОВОР ОБ ОБУЧЕНИИ</h2>

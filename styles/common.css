@@ -1,4 +1,7 @@
 :root {
+    --margin-side-left: 116px;
+}
+.theme-light {
     --body-background-color: #FBEAFF;
     --main-background-color: #845EC2;
     --secondary-background-color: #B39CD0;
@@ -6,10 +9,31 @@
     --assent-disabled-color: #84E7D6;
 
     --main-text-color: white;
+    --text-body-color: black;
+
     --secondary-text-color: black;
     --disabled-text-color: #4F4E4E;
+    --disabled-btn-background-color: aquamarine;
+    --disabled-btn-color: grey;
 
-    --margin-side-left: 116px;
+    --dogovor-link-color: blue;
+}
+.theme-dark {
+    --body-background-color: #302443;
+    --main-background-color: #451F17;
+    --secondary-background-color: #784C42;
+    --assent-color: #7B7484;
+    --assent-disabled-color: #84E7D6;
+
+    --main-text-color: white;
+    --text-body-color: white;
+    --secondary-text-color: black;
+    --disabled-text-color: #9b9191;
+
+    --disabled-btn-background-color: grey;
+    --disabled-btn-color: black;
+
+    --dogovor-link-color: #ff9f9f;
 }
 
 body {
@@ -22,6 +46,9 @@ body {
     height: 113px;
 
     display: flex;
+}
+.nav-main-top {
+    width: 100vw;
 }
 .logo-and-name {
     margin-top: auto;
@@ -49,6 +76,17 @@ body {
     text-transform: uppercase;
 }
 
+.theme-toggler {
+    width: 56px;
+    height: 61px;
+    
+    margin: auto;
+    margin-right: 18px;
+
+    
+    display: flex;
+}
+
 .about,
 .footer {
     background-color: var(--secondary-background-color);
@@ -70,4 +108,7 @@ body {
 }
 .invisible {
     display: none !important;
+}
+.theme-dark option {
+    background-color: black;
 }

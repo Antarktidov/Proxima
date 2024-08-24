@@ -7,7 +7,7 @@
     <?php require_once 'default-css-imports.php';?>
     <link rel="stylesheet" href="styles/404.css">
 </head>
-<body>
+<body  class="theme-light">
 <?php require_once 'top-nav.php';?>
 <main class="error-404-main">
     <h2 class="error-404-numbers">403</h2>

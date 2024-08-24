@@ -1,7 +1,9 @@
 .dogovor-main {
     margin-top: 72px;
     margin-left: var(--margin-side-left);
-    margin-right:  var(--margin-side-left);;
+    margin-right:  var(--margin-side-left);
+    
+    color: var(--text-body-color);
 }
 
 .dogovor-h2 {

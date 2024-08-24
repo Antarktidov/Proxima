@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="styles/study-choice-modal.css">
     <script src="scripts/mainpage.js" defer></script>
 </head>
-<body>
+<body class="theme-light">
 <?php require_once 'components/top-nav.php';?>
             <div class="about">
                 <p class="p-about">Образовательный центр «Проксима» предоставляет вам второе обучение, но не для диплома, а для души. Здесь вы можете освоить различные IT, творческие специальности и прикоснуться к тайнам мироздания. Мы проводим занятия не в онлайне, а в живую, пока только в пяти городах России</p>

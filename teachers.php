@@ -19,7 +19,7 @@ require_once 'components/test-input.php';
     </style>
     <script src="scripts/teachers.js" defer></script>
 </head>
-<body>
+<body  class="theme-light">
 <?php require_once 'components/top-nav.php';?>
 <main class="teachers-main">
 <h2 class="teachers-h2">НАШИ ПРЕПОДАВАТЕЛИ</h2>

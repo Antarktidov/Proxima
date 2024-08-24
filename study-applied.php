@@ -42,10 +42,7 @@ require_once 'components/php_log.php';
   echo 'e-mail:' . $email . '<br>';*/
 
   //Через какие-то sql-инекции
-  $servername = "localhost";
-  $username = "root";
-  $password = "";
-  $dbname = "proxima_students";
+  require_once 'components/db-data.php';
   //Запрос 0
   $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
@@ -63,6 +60,7 @@ if ($conn->connect_error) {
     }
   } else {
     php_log("0 results");
+    $last_id = 0;
   }
   $conn->close();
   
@@ -99,7 +97,7 @@ mysqli_close($conn);
     <link rel="stylesheet" href="styles/study-applied.css">
     <script src="scripts/study-application.js" defer></script>
 </head>
-<body>
+<body  class="theme-light">
     <?php require_once 'components/top-nav.php';?>
     <main class="applied-main">
       <h2 class="congratulations-h2">ПОЗДРАВЛЯЕМ!</h2>

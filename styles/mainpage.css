@@ -5,12 +5,14 @@
 .our-studyes-h2 {
     font-size: 36px;
     font-weight: 500;
+    color: var(--text-body-color);
 }
 .our-studyes-block {
     margin-top: 37px;
 }
 .our-studyes-h3 {
     font-size: 30px;
+    color: var(--text-body-color);
 }
 .our-studyes-sub-block {
     margin-top: 24px;
