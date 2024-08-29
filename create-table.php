@@ -15,8 +15,9 @@ if ($ip == '::1' || $ip == '127.0.0.1') {
 
         <link rel="stylesheet" href="styles/admin-dashboard.css">
         <meta name="viewport" content="width=1170">
+        <script src="scripts/theme-toggler.js" defer></script>
     </head>
-    <body>
+    <body class="theme-light">
         <?php require_once 'components/admin-top-nav.php';?>
         <main class="admin-dashboard-main">
     <?php
