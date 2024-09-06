@@ -18,7 +18,7 @@
                     "image"=>"Unity-study.png",
                     "alt" => "Специальнсоть Unity-разработчик",
                     "study-name" => "Unity-разработчик",
-                    "study-description" => "Узнай всё о мире фронтенда"),
+                    "study-description" => "Выучи язык разработки Microsoft и погрузить в объектоно-ориентированное программирование"),
             array(   
                     "id" =>"unreal-study",
                     "image"=>"Unreal-Engine-study.png",
@@ -30,7 +30,7 @@
         array (
         "name" => "Творческие специальности",
         "list" => array( array(  "id" => "3d-study",
-                            "image"=>"Ux-Ui-study.png",
+                            "image"=>"3D-artist-study.png",
                             "alt" => "Специальнсоть 3D-художник",
                             "study-name" => "3D-художник",
                             "study-description" => "Научись создавать классных 3D-персонажей и локации"),
@@ -88,7 +88,7 @@
                                         array( array(  "id" => "management-study",
                                                     "image"=>"managament-study.png",
                                                     "alt" => "Предмет Менеджмент",
-                                                    "study-name" => "Квантовая физика",
+                                                    "study-name" => "Предмет Менеджмент",
                                                     "study-description" => "Кто знает, быть может ты станешь талантливым менеджером?"),
                                             array(
                                                         "id" => "philopsophy-study",

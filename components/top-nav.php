@@ -11,6 +11,7 @@
                     <a class="nav-link" href="<?=$standart_path;?>">Главная</a>
                     <a class="nav-link" href="<?=$standart_path;?>/teachers.php">Преподаватели</a>
                     <a class="nav-link" href="<?=$standart_path;?>/dogovor.php">Договор об обучении</a>
+                    <a class="nav-link" href="<?=$standart_path;?>/blog.php">Блог</a>
                 </nav>
                 <!--<div class="top-desktop-icons">-->
                     <img src="images/hambureger-menu.png"
@@ -30,6 +31,7 @@
                     <a class="nav-link" href="<?=$standart_path;?>">Главная</a>
                     <a class="nav-link" href="<?=$standart_path;?>/teachers.php">Преподаватели</a>
                     <a class="nav-link" href="<?=$standart_path;?>/dogovor.php">Договор об обучении</a>
+                    <a class="nav-link" href="<?=$standart_path;?>/blog.php">Блог</a>
                     <span class="theme-toggler-mobile nav-link">
                         <a class="theme-toggler-nav-link" href="#">Тёмная тема</a>
                         <img src="images/MoonThemeToggler.png"
