@@ -10,7 +10,7 @@
         flex-direction: column;
         background-color: var(--main-background-color);
         color: var(--main-text-color);
-        height: 200px;
+        height: fit-content;
     }
     .sub-nav-mobile .nav-link {
         margin: 15px;
